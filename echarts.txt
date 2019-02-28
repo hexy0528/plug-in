@@ -1,0 +1,80 @@
+option = {
+			        title: {
+			            text : '北京地图',
+			            subtext : '各管理单位分布'
+			        },
+			           tooltip: {
+			            trigger: 'item',
+			            formatter: '{b}'
+			        },
+			         /* visualMap: {
+			            min: 100,
+			            max: 50000,
+			            text:['High','Low'],
+			            realtime: false,
+			            calculable: true,
+			            inRange: {
+			                color: ['lightskyblue','yellow', 'orangered']
+			            }
+			        },*/
+			        
+			        toolbox: {
+			            show: true,
+			            orient: 'vertical',
+			            left: 'right',
+			            top: 'center',
+			            feature: {
+			             //   dataView: {readOnly: false},
+			                restore: {},
+			                saveAsImage: {}
+			            }
+			         },
+			        dataRange: {
+			            min: 0,
+			            max: 13,
+			            color:['#87CEFA','yellow'],
+			            text:['高','低'],           // 文本，默认为数值文本
+			            //calculable : true
+			        },       
+			        series : [
+			            {
+			                name: '数据名称',
+			                zoom: 1.2,
+			                roam: true,
+			                type: 'map',
+			                mapType: '北京',
+			                selectedMode : 'single',
+			                itemStyle:{
+			                   normal:{label:{show:true},
+			                   		/*	areaStyle: {
+			                                    color: '#87CEFA',//默认的地图板块颜色
+			                                },*/
+			                   			},
+			                    emphasis:{label:{show:true}}
+			                 
+			                },
+			                data:[
+			                  //  {name: '怀柔区',value:100},
+			                    {name: '怀柔区',value: 100},
+			                    {name: '延庆县',value:100},
+			                    {name: '密云县',value:100},
+			                    {name: '昌平区',value:100},
+			                    {name: '平谷区',value:100},
+			                    {name: '顺义区',value:100},
+			                    {name: '门头沟区',value:100},
+			                    {name: '海淀区',value:100},
+			                    {name: '朝阳区',value:100},
+			                    {name: '石景山区',value:100},
+			                    {name: '西城区',value:100},
+			                    {name: '东城区',value:100},
+			                    {name: '宣武区',value:100},
+			                    {name: '丰台区',value:100},
+			                    {name: '房山区',value:100},
+			                    {name: '通州区',value:100},
+			                    {name: '大兴区',value:100},
+			                    
+			                ]
+			            }
+			        ]
+			    };
+		loadChart.setOption(option); 
